@@ -1,0 +1,46 @@
+version: '3.5'
+
+services:
+
+  service-zon-coffee:
+    image: kunthysen/zon-cofee:1.0.0
+    ports:
+      - 6001:80
+    deploy:
+      mode: global
+      #replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+
+
+  service-eflyer:
+    image: kunthysen/eflyer:1.0.0
+    ports:
+      - 6002:80
+    deploy:
+      mode: global
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+
+
+  service-beautiflie:
+    image: kunthysen/beautiflie:1.0.0
+    ports:
+      - 6003:80
+    deploy:
+      mode: global
+      #replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
