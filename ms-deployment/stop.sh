@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker stack rm DEMO
+docker stack rm GROUP2

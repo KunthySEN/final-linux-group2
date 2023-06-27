@@ -3,9 +3,9 @@ version: '3.5'
 services:
 
   service-zon-coffee:
-    image: kunthysen/zon-cofee:1.0.0
+    image: kunthysen/zon-coffee:2.0.0
     ports:
-      - 6001:80
+      - 8082:80
     deploy:
       mode: global
       #replicas: 1
@@ -18,9 +18,9 @@ services:
 
 
   service-eflyer:
-    image: kunthysen/eflyer:1.0.0
+    image: kunthysen/eflyer:2.0.0
     ports:
-      - 6002:80
+      - 8081:80
     deploy:
       mode: global
       update_config:
@@ -32,9 +32,9 @@ services:
 
 
   service-beautiflie:
-    image: kunthysen/beautiflie:1.0.0
+    image: kunthysen/beatutiflie:2.0.0
     ports:
-      - 6003:80
+      - 80:80
     deploy:
       mode: global
       #replicas: 1
